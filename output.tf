@@ -1,11 +1,13 @@
-output "instance_id" {
-  value = aws_instance.practice_ec2.id
-}
-
-output "public_ip" {
-  value = aws_instance.practice_ec2.public_ip
-}
-
 output "public_dns" {
-  value = aws_instance.practice_ec2.public_dns
+  value = aws_instance.myserver.public_dns
+}
+
+output "ec2_public_ip" {
+  description = "Public IP of the EC2 instance"
+  value       = aws_instance.myserver.public_ip
+}
+
+output "instance_id" {
+  description = "EC2 instance ID"
+  value       = aws_instance.myserver.id
 }
